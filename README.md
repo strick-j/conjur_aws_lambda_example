@@ -15,12 +15,12 @@ This script will use the AWS_ACCESS_KEY and AWS_SECRET assigned to the role that
   6. Conjur_authn_login = Your applicaion authn login string (e.g. host/<application_name>/<aws_account_number>/<aws_iam_role> or host/myapp/123456789123/Conjur-Lambda-Role)
   7. conjur_cert_file = The name of the certificate you uploaded (e.g. conjurcert.pem)
   8. var_id = The name of the variable you defined in Conjur (e.g. myapp/database/password)
-  * Note: Variable above are directly related to the authn-iam integration setup information.
+* Note: Variables above are directly related to the authn-iam integration setup information provided by CyberArk
 
 # Basic use case instructions
 1. Clone this repository
-2. Run the following command from the directory: "bundle install --path vendor/bundle
+2. Run the following command from the directory: `bundle install --path vendor/bundle`
 3. Copy your conjur cert into this directory with the name you plan to assign in the lambda function Environment Variables (e.g. conjurcert.pem)
-4. Zip the required contents for the function: "zip -r function.zip lambda_function.rb conjurcert.pem vendor"
-5. Upload the zip to your lambda function: "aws lambda update-function-code --function-name Conjur-Lambda-Function --zip-file fileb://function.zip"
+4. Zip the required contents for the function: `zip -r function.zip lambda_function.rb conjurcert.pem vendor`
+5. Upload the zip to your lambda function: `aws lambda update-function-code --function-name Conjur-Lambda-Function --zip-file fileb://function.zip`
 
