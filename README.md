@@ -7,14 +7,13 @@ This script will use the AWS_ACCESS_KEY and AWS_SECRET assigned to the role that
 # Prerequisites
 1. Lambda function defined that is assigned a role that is able to authenticate with your Conjur instance - See docs link above
 2. Define the following Lambda function Environment Variables:
-   1. application_name = The name of your defined application in Conjur (e.g. myapp)
-   2. authn_iam_service_id = The name of your defined service id in Conjur (e.g. prod)
-   3. aws_account_number = Your AWS account number (e.g. 123456789123)
-   4. aws_iam_role = The name of the role you created in AWS that can authenticate with Conjur (e.g. Conjur-Lambda-Role)
-   5. conjur_account = The name of you Conjur Account
-   6. Conjur_authn_login = Your applicaion authn login string (e.g. host/<application_name>/<aws_account_number>/<aws_iam_role> or host/myapp/123456789123/Conjur-Lambda-Role)
-   7. conjur_cert_file = The name of the certificate you uploaded (e.g. conjurcert.pem)
-   8. var_id = The name of the variable you defined in Conjur (e.g. myapp/database/password)
+   1. *application_name* = The name of your defined application in Conjur (e.g. myapp)
+   2. *authn_iam_service_id* = The name of your defined service id in Conjur (e.g. prod)
+   3. *aws_iam_role* = The name of the role you created in AWS that can authenticate with Conjur (e.g. Conjur-Lambda-Role)
+   4. *conjur_account* = The name of you Conjur Account
+   5. *conjur_authn_login* = Your applicaion authn login string (e.g. host/<application_name>/<aws_account_number>/<aws_iam_role> or host/myapp/123456789123/Conjur-Lambda-Role)
+   6. *conjur_cert_file* = The name of the certificate you uploaded (e.g. conjurcert.pem)
+   7. *var_id* = The name of the variable you defined in Conjur (e.g. myapp/database/password)
 * Note: Variables above are directly related to the authn-iam integration setup information provided by CyberArk
 
 # Basic use case instructions
