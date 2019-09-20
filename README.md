@@ -6,6 +6,7 @@ This script will use the AWS_ACCESS_KEY and AWS_SECRET assigned to the role that
 
 # Prerequisites
 1. Lambda function defined that is assigned a role that is able to authenticate with your Conjur instance - See docs link above
+2. Set the handler for your lambda function to: lambda_function.lambda_handler if it is not already set
 2. Define the following Lambda function Environment Variables:
    1. *application_name* = The name of your defined application in Conjur (e.g. myapp)
    2. *authn_iam_service_id* = The name of your defined service id in Conjur (e.g. prod)
@@ -18,7 +19,7 @@ This script will use the AWS_ACCESS_KEY and AWS_SECRET assigned to the role that
 
 # Basic use case instructions
 1. Clone this repository
-2. Run the following command from the directory: `bundle install --path vendor/bundle`
-3. Copy your conjur cert into this directory with the name you plan to assign in the lambda function Environment Variables (e.g. conjurcert.pem)
+2. Copy your conjur cert into this directory with the name you plan to assign in the lambda function Environment Variables (e.g. conjurcert.pem)
+3. Run the following command from the directory: `bundle install --path vendor/bundle`
 4. Zip the required contents for the function: `zip -r function.zip lambda_function.rb conjurcert.pem vendor`
 5. Upload the zip to your lambda function: `aws lambda update-function-code --function-name Conjur-Lambda-Function --zip-file fileb://function.zip`
