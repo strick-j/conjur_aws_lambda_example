@@ -1,0 +1,8 @@
+functions:
+        conjur-lambda-test:
+                handler: lambda_function::conjur-lambda-test
+
+package:
+        exclude:
+                - Gemfile
+                - Gemfile.lock
