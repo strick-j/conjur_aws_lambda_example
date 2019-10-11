@@ -7,7 +7,7 @@ This script will use the AWS_ACCESS_KEY and AWS_SECRET assigned to the role that
 # Prerequisites
 1. Lambda function defined that is assigned a role that is able to authenticate with your Conjur instance - See docs link above
 2. Create an IAM Role, Trust Relationship, and Policy for the Lambda Function
-  1. *you can use the scripts and json templates in the AWS-Policy folder to create a role with appropriate permissions*
+   1. *you can use the scripts and json templates in the AWS-Policy folder to create a role with appropriate permissions*
 3. Set the handler for your lambda function to: lambda_function.lambda_handler if it is not already set
 4. Define the following Lambda function Environment Variables:
    1. *application_name* = The name of your defined application in Conjur (e.g. myapp)
