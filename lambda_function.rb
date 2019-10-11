@@ -40,5 +40,6 @@ def lambda_handler(event:, context:)
   variable_value = conjur.resource("#{Conjur.configuration.account}:variable:#{ENV["var_id"]}").value
   puts "---- Obtaining Secret Value for #{ENV["var_id"]}"
   puts "---- Conjur Secret Value: #{variable_value}"
+  variable_value
 end
 
